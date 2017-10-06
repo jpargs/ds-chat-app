@@ -1,0 +1,23 @@
+#sign_up.container
+  .row style="margin-top:20px" 
+    .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
+      =form_for @user do |f|
+        fieldset
+          h2 Register
+          hr.colorgraph/
+          .form-group
+            =f.email_field :email, :id=>"email", :class=>"form-control input-lg ", :value=>nil,placeholder: "Email" 
+          .form-group
+            =f.password_field :password, :id=>"password", autocomplete: "off", :class=>"form-control input-lg", placeholder: "Password" 
+          .form-group
+            =f.text_field :first_name, :id=>"first_name", :class=>"form-control input-lg", :value=>nil,placeholder: "First Name" 
+          .form-group
+            =f.text_field :last_name, :id=>"last_name", :class=>"form-control input-lg", :value=>nil,placeholder: "Last Name"   
+          hr.colorgraph/
+          .row
+            .col-xs-6.col-sm-6.col-md-6
+              button.btn.btn-lg.btn-success.btn-block#register type="submit" value=("Register") Register
+            .col-xs-6.col-sm-6.col-md-6
+              a.btn.btn-lg.btn-primary.btn-block href="/"  Login
+
+    
